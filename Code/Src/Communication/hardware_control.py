@@ -81,6 +81,9 @@ class HUIThread(threading.Thread):
                 time.sleep(.1)
                 GPIO.output(led, GPIO.LOW)
             time.sleep(.1)
+        GPIO.output(led, GPIO.HIGH)
+        time.sleep(1)
+        GPIO.output(led, GPIO.LOW)
 
     def run(self):
         """ run HUI """
